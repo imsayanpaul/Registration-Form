@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <center>
+        <h1>SPORTS CLUB MEMBERSHIP</h1>
+    </center>
+
+    <div class="container">
+        <div class="bg-rec">
+            <div class="heading1">Registration Form</div>
+            <div class="heading-txt">Complete the form below to Sign up for our membership service.</div>
+
+            <section class="first-sec">
+                <div class="head-details">Your Details</div>
+                <hr>
+                <form action="/">
+                    <div class="yourname">
+                        <label for="name">Name:</label>
+                        <input class="name-input" type="text" placeholder="Full Name" required>
+                    </div>
+
+                    <div class="father-name">
+                        <label for="name">Father's Name:</label>
+                        <input class="fname-input" type="text" placeholder="Father's Name" required>
+                    </div>
+
+                    <div class="contactno">
+                        <label for="name">Contact number:</label>
+                        <input class="contact-input" type="number" placeholder="Contact Number" required>
+                    </div>
+
+                    <label for="street-address">Street Address</label>
+                    <input class="street-add" type="text" id="street-address" name="street-address"
+                        placeholder="Street Line 2" required>
+                    <input class="street-add" type="text" id="street-address" name="street-address"
+                        placeholder="Street Address" required>
+
+
+                    <div class="occupation">
+                        <label for="name">Occupation:</label>
+                        <select name="occupation" id="occupation">
+                            <option value="0">Select:</option>
+                            <option value="1">Business</option>
+                            <option value="2">Service</option>
+                            <option value="3">Retired</option>
+                        </select>
+                    </div>
+
+                    <div class="qualification">
+                        <label for="name">Qualification:</label>
+                        <select name="qualification" id="qualification">
+                            <option value="0">Select:</option>
+                            <option value="1">Under Graduate</option>
+                            <option value="2">Graduate</option>
+                            <option value="3">Post Graduate</option>
+                        </select>
+                    </div>
+
+                    <div class="age">
+                        <label for="age">Age:</label>
+                        <input class="age-input" type="number" placeholder="Your Age" required>
+                    </div>
+
+                    <div class="gender">
+                        <label for="age">Gender:</label>
+                        <div class="gender-grp">
+                            <label>Male<input class="radio" type="radio" name="gender" value="male" required></label>
+                            <label>Female<input class="radio" type="radio" name="gender" value="female"
+                                    required></label>
+                        </div>
+                    </div>
+
+                    <div class="email">
+                        <label for="name">E-Mail:</label>
+                        <input class="email-input" type="email" placeholder="Your E-mail Address" required>
+                    </div>
+
+                    <div class="pass">
+                        <label for="name">Password:</label>
+                        <div class="pass-box"><input class="pass-input" type="password" placeholder="Enter Password" required></div>
+                        <span class="show-pass" id="toggle-password">
+                            <i class="fas fa-eye"></i></span>
+                        
+                    </div>
+
+                    <center><input class="submit" type="submit" value="Submit"></center>
+                </form>
+
+
+            </section>
+        </div>
+    </div>
+
+    <script>
+        const passwordInput = document.querySelector('.pass-input');
+        const togglePassword = document.getElementById('toggle-password');
+
+        togglePassword.addEventListener('click', function () {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            this.querySelector('i').classList.toggle('fa-eye');
+            this.querySelector('i').classList.toggle('fa-eye-slash');
+        });
+    </script>
+</body>
+
+</html>
